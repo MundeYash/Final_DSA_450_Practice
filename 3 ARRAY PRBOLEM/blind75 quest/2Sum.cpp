@@ -29,7 +29,8 @@ vector<pair<int, int>> PairSum_optimised2(vector<int> arr, int n, int target)
             int first = it->second;
             int second = i;
             ans.push_back({first, second}); // assuming 0 based indexing
-            mp.erase(it);                   // remove the pair from map
+            mp.erase(it);                   // remove the pair from map, for duplicate case handling 
+            
         }
         mp[curr] = i;
     }
@@ -38,8 +39,8 @@ vector<pair<int, int>> PairSum_optimised2(vector<int> arr, int n, int target)
 }
 vector<pair<int, int>> Pairsum(vector<int> arr, int n, int target)
 {
-    // Apprach 2 : optimised : (valid for pair value cases )
-    // if we don't have restricion in indexes
+    // Apprach 2 :concept - sorting approach + Two pointer approach , optimised : (valid for pair value cases ) if we don't have restricion in indexes
+    // time : O (n log n ) , space : O(1)
     vector<pair<int, int>> ans;
     sort(arr.begin(), arr.end()); //
     int left = 0, right = n - 1;

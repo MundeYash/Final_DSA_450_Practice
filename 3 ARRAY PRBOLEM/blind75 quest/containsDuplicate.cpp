@@ -7,6 +7,7 @@ bool approach2(vector<int> arr)
     int n = arr.size();
     for (int i = 0; i < n; i++)
     {
+        
     }
 }
 

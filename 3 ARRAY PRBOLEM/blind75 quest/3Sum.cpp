@@ -2,8 +2,8 @@
 using namespace std;
 // given an array and target  ,we need to find the unique triplets whose sum is equal to the target
 vector<vector<int>> Optimised(vector<int> arr, int target)
-{   
-    // concept : modified version of sorting and two pointer approach 
+{
+    // concept : modified version of sorting and two pointer approach
 
     // time complexity of this code : O(n^2), space : O(1)
     vector<vector<int>> ans;
@@ -12,6 +12,7 @@ vector<vector<int>> Optimised(vector<int> arr, int target)
     sort(arr.begin(), arr.end());
     for (int i = 0; i < n; i++)
     {
+        
         int l = i + 1;
         int r = n - 1;
         while (l < r)
@@ -120,30 +121,30 @@ void printTriplets(vector<vector<int>> ans)
 }
 int main()
 {
-    vector<int> arr = {-1, 0, 1, 2, -1, -4};
-    int target = 0;
+    vector<int> arr = {1, 4, 1, 4, 45, 6, 8,8, 10};
+    int target = 13;
 
     vector<vector<int>> ans = brute(arr, target);
 
     vector<vector<int>> ans2 = better(arr, target);
     vector<vector<int>> ans3 = Optimised(arr, target);
-    printTriplets(ans);
-    cout << "\nFor Brute Force : ";
-    printTriplets(ans2);
-    cout << "\nFor Better  : ";
-    printTriplets(ans3);
-    cout << "\nFor Optimised Force : ";
 
+    cout << "\nFor Brute Force : ";
+    printTriplets(ans);
+    cout << "\nFor Better  : ";
+    printTriplets(ans2);
+
+    cout << "\nFor Optimised Force : ";
+    printTriplets(ans3);
     return 0;
 }
 
-
 /*
-article : https://takeuforward.org/data-structure/3-sum-find-triplets-that-add-up-to-a-zero/ 
+article : https://takeuforward.org/data-structure/3-sum-find-triplets-that-add-up-to-a-zero/
 
 
-must try question : 
-https://www.interviewbit.com/problems/3-sum/ 
+must try question :
+https://www.interviewbit.com/problems/3-sum/
 https://www.geeksforgeeks.org/problems/3-sum-closest/1
 https://www.geeksforgeeks.org/problems/three-sum-closest/1
 

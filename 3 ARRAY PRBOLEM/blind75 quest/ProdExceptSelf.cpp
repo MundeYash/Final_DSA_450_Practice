@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std ; 
-//Question Name : Product of array except the self (Multiplication of array elements except the sef )
+//Question Name : Product of array except the self (Multiplication of array elements except the self )
 
 vector<int> solution_optimised(vector<int>arr ){
     // concept : prefixProduct and suffix Product 
